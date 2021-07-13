@@ -116,6 +116,7 @@ DATABASES = {
 ...
 ```
 
+Let7s try this command and if you have succeeded it , access to http://localhost:8000/ .
 ```terminal
 $ docker-compose up -d
 
@@ -123,9 +124,22 @@ $ docker-compose up -d
 => Creating docker-blog_web_1 ... done
 ```
 
+You can check which containers are running by using __```$ docker ps```__ command.
 
-
-
-
-
-
+```terminal
+CONTAINER ID   IMAGE                COMMAND                  CREATED          STATUS          PORTS                    NAMES
+06d98d67a07f   docker-blog_web      "python3 manage.py r…"   8 minutes ago    Up 8 minutes    0.0.0.0:8000->8000/tcp   docker-blog_web_1
+...
+```
+The command to create and start blog application
+```
+$ docker-compose exec web python manage.py startapp blog
+```
+stop:
+```
+$ docker-compose stop
+```
+restart:
+```
+$ docker-compose restart
+```
