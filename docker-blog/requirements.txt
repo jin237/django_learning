@@ -1,0 +1,4 @@
+Django
+
+# PosrgreSQLへ接続するためのドライバ
+Psycopg2
